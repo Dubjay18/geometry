@@ -24,11 +24,11 @@ func main() {
 	for _, s := range shps {
 		fmt.Println("Area:", s.Area())
 		fmt.Println("Perimeter:", s.Perimeter())
-		switch s.(type) {
-		case *shapes.Circle:
-			fmt.Println("circle")
-		case *shapes.Rectangle:
-			fmt.Println("rectangle")
+		switch v := s.(type) {
+		case shapes.Circle:
+			fmt.Println("This is a circle with radius", v.Radius)
+		case shapes.Rectangle:
+			fmt.Println("This is a rectangle with width", v.Width, "and height", v.Height)
 		}
 	}
 

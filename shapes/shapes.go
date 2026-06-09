@@ -37,22 +37,22 @@ func NewRectangle(w, h float64) (*Rectangle, error) {
 }
 
 
-func (c *Circle) Area() float64 {
+func (c Circle) Area() float64 {
 	return 3.14 * c.Radius * c.Radius
 }
 
-func (c *Circle) Perimeter() float64 {
+func (c Circle) Perimeter() float64 {
 	return 2 * 3.14 * c.Radius
 }
 
-func (c *Circle) String() string {
+func (c Circle) String() string {
 	return fmt.Sprintf("circle(r=%.2f)", c.Radius)
 }
 
-func (r *Rectangle) Area() float64 {
+func (r Rectangle) Area() float64 {
 	return r.Width * r.Height
 }
 
-func (r *Rectangle) Perimeter() float64 {
+func (r Rectangle) Perimeter() float64 {
 	return 2 * (r.Width + r.Height)
 }
